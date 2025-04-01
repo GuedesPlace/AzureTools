@@ -4,7 +4,7 @@ using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
 using Newtonsoft.Json;
 
-namespace GuedesPlace.AzureTools.Extensions;
+namespace GuedesPlace.AzureTools.Blob.Extensions;
 
 public static class BlobExtensions {
 
