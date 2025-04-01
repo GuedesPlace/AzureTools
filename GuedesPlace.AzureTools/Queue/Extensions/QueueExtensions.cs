@@ -3,7 +3,7 @@ using Azure.Storage.Queues;
 using Azure.Storage.Queues.Models;
 using Newtonsoft.Json;
 
-namespace GuedesPlace.AzureTools.Extensions;
+namespace GuedesPlace.AzureTools.Queue.Extensions;
 
 public static class QueueExtensions
 {
