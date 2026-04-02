@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "Guedes"
-    ]
+    ],
+    "sarif-viewer.connectToGithubCodeScanning": "off"
 }
