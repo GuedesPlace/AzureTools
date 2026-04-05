@@ -98,6 +98,9 @@ await queue.SendPayloadToQueueDelayed(payload, delaySeconds: 30, cancellationTok
 
 // Send with a custom time-to-live
 await queue.SendPayloadToQueueWithDefinedLifeTime(payload, TimeSpan.FromHours(1), cancellationToken);
+
+// send with visibility delay and custom time-to-live
+await queue.SendPayloadToQueueDelayedWithDefinedLifeTime(payload, 30, TimeSpan.FromHours(1), cancellationToken);
 ```
 
 **Receiving:**

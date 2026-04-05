@@ -38,4 +38,11 @@ public static class QueueExtensions
         string b64Payload = Convert.ToBase64String(Encoding.UTF8.GetBytes(payloadString));
         return await client.SendMessageAsync(b64Payload, null, lifeTime, token);
     }
+    public static async Task<SendReceipt> SendPayloadToQueueDelayedWithDefinedLifeTime(this QueueClient client, object payload, double delaySeconds, TimeSpan lifeTime, CancellationToken token = default)
+    {
+        var timeSpan = TimeSpan.FromSeconds(delaySeconds);
+        string payloadString = JsonConvert.SerializeObject(payload);
+        string b64Payload = Convert.ToBase64String(Encoding.UTF8.GetBytes(payloadString));
+        return await client.SendMessageAsync(b64Payload, timeSpan, lifeTime, token);
+    }
 }
